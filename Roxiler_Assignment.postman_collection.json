@@ -1,0 +1,207 @@
+{
+  "info": {
+    "name": "Roxiler_Assignment",
+    "_postman_id": "a1b2c3d4-5678-9101-1121-314151617181",
+    "description": "Postman collection for Roxiler assignment APIs with Admin, User, Store Owner endpoints and JWT tokens.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Add Store",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkFkbWluIiwiaWF0IjoxNzU3MzIwMDY3LCJleHAiOjE3NTczMjM2Njd9.TeTkce2uiotm28klO5jbOP5jVEhRE1zcwCwc093VDY8",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test Store\",\n  \"email\": \"store@example.com\",\n  \"address\": \"123 Main Street\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/admin/add-store",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["admin", "add-store"]
+            }
+          }
+        },
+        {
+          "name": "Dashboard Stats",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkFkbWluIiwiaWF0IjoxNzU3MzIwMDY3LCJleHAiOjE3NTczMjM2Njd9.TeTkce2uiotm28klO5jbOP5jVEhRE1zcwCwc093VDY8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/admin/dashboard-stats",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["admin", "dashboard-stats"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "User",
+      "item": [
+        {
+          "name": "Update Password",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkhpbWFuc2h1IiwiaWF0IjoxNzU3MzIwMDY3LCJleHAiOjE3NTczMjM2Njd9.nRuxToDfv-4FPc0Ac0VmVDxlE94isToMM7DskTEehJE",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"oldPassword\": \"Password@123\",\n  \"newPassword\": \"NewPassword@123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/user/update-password",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["user", "update-password"]
+            }
+          }
+        },
+        {
+          "name": "View Stores",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkhpbWFuc2h1IiwiaWF0IjoxNzU3MzIwMDY3LCJleHAiOjE3NTczMjM2Njd9.nRuxToDfv-4FPc0Ac0VmVDxlE94isToMM7DskTEehJE",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/user/stores?search=Test",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["user", "stores"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Test"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Submit Rating",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkhpbWFuc2h1IiwiaWF0IjoxNzU3MzIwMDY3LCJleHAiOjE3NTczMjM2Njd9.nRuxToDfv-4FPc0Ac0VmVDxlE94isToMM7DskTEehJE",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"storeId\": 1,\n  \"rating\": 5\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/user/rate-store",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["user", "rate-store"]
+            }
+          }
+        },
+        {
+          "name": "Update Rating",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkhpbWFuc2h1IiwiaWF0IjoxNzU3MzIwMDY3LCJleHAiOjE3NTczMjM2Njd9.nRuxToDfv-4FPc0Ac0VmVDxlE94isToMM7DskTEehJE",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"storeId\": 1,\n  \"rating\": 4\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/user/rate-store",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["user", "rate-store"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Store Owner",
+      "item": [
+        {
+          "name": "Dashboard",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IlN0b3JlT3duZXIiLCJyb2xlIjoic3RvcmVfb3duZXIiLCJzdG9yZUlkIjoxLCJpYXQiOjE3NTczMjAwNjcsImV4cCI6MTc1NzMyMzY2N30.lhPZFbp0VgHvxrn6OxMTpvpuOfCvl75SzqKZGHlbyuA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:5000/store/dashboard",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["store", "dashboard"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
