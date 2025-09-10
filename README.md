@@ -1,12 +1,12 @@
-# Roxilersystem-fullstack-challenge
-FullStack Intern Coding Challenge
-Tech Stack
-● Backend: Any one of backend framework from this ExpressJs/Loopback/NestJs
-● Database: PostgreSQL/MySQL
-● Frontend: ReactJs
-Requirements
-They need a web application that allows users to submit ratings for stores registered on the
-platform. The ratings should range from 1 to 5.
-A single login system should be implemented for all users. Based on their roles, users will
-have access to different functionalities upon logging in.
-Normal users should be able to sign up on the platform through a registration page.
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { updatePassword } = require('../controllers/userController');
-const auth = require('../middlewares/auth'); // JWT middleware
+const { signup, login } = require('../controllers/userController');
 
-// Password Update API
-router.put('/update-password', auth, updatePassword);
+router.post('/signup', signup);
+router.post('/login', login);
 
 module.exports = router;
